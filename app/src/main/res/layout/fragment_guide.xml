@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GuideFragment">
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+        <TextView
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="TAICHUNG GUIDE"
+            android:textColor="@color/white"
+            android:textSize="40sp" />
+    </ScrollView>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginTop="50dp"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/goto_beitun"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_marginStart="170dp"
+                android:layout_marginBottom="100dp"
+                android:background="@drawable/blue2_circle"
+                android:text="@string/beitun"
+                android:textSize="25sp" />
+
+            <Button
+                android:id="@+id/goto_xitun"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="-170dp"
+                android:background="@drawable/blue2_circle"
+                android:text="@string/xitun"
+                android:textColor="@color/white"
+                android:textSize="25dp" />
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginStart="130dp"
+                android:layout_marginTop="-70dp"
+                android:src="@drawable/baseline_pedal_bike_white_48dp" />
+
+            <Button
+                android:id="@+id/goto_nantun"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="-60dp"
+                android:background="@drawable/blue2_circle"
+                android:text="@string/nantun"
+                android:textSize="24sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <Button
+                android:id="@+id/gotosearch_btn"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="260dp"
+                android:layout_marginTop="-100dp"
+                android:background="@drawable/blue2_circle"
+                android:text="search"
+                android:textSize="21sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+

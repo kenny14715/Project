@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav_graph"
+    app:startDestination="@id/loginFragment">
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.example.project.RegisterFragment"
+        android:label="fragment_register"
+        tools:layout="@layout/fragment_register" />
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.project.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_registerFragment"
+            app:destination="@id/registerFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_guideFragment"
+            app:destination="@id/guideFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/placeFragment"
+        android:name="com.example.project.placeFragment"
+        android:label="spot_fragment"
+        tools:layout="@layout/spot_fragment" />
+
+    <fragment
+        android:id="@+id/guideFragment"
+        android:name="com.example.project.GuideFragment"
+        android:label="fragment_guide"
+        tools:layout="@layout/fragment_guide" >
+        <action
+            android:id="@+id/action_guideFragment_to_beitunFragment"
+            app:destination="@id/beitunFragment" />
+        <action
+            android:id="@+id/action_guideFragment_to_xitunFragment"
+            app:destination="@id/xitunFragment" />
+        <action
+            android:id="@+id/action_guideFragment_to_nantunFragment"
+            app:destination="@id/nantunFragment" />
+        <action
+            android:id="@+id/action_guideFragment_to_searchFragment"
+            app:destination="@id/searchFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.example.project.SearchFragment"
+        android:label="fragment_search"
+        tools:layout="@layout/fragment_search" >
+        <action
+            android:id="@+id/action_searchFragment_to_map_guideFragment"
+            app:destination="@id/map_guideFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/AfterLogin"
+        android:name="com.example.project.AfterLogin"
+        android:label="after_login"
+        tools:layout="@layout/after_login" />
+
+    <fragment
+        android:id="@+id/minimapFragment"
+        android:name="com.example.project.MinimapFragment"
+        android:label="fragment_map"
+        tools:layout="@layout/fragment_map" />
+    <fragment
+        android:id="@+id/beitunFragment"
+        android:name="com.example.project.beitunFragment"
+        android:label="beitunFragment" >
+        <action
+            android:id="@+id/action_beitunFragment_to_minimapFragment"
+            app:destination="@id/minimapFragment" />
+        <action
+            android:id="@+id/action_beitunFragment_to_bike_stopsFragment"
+            app:destination="@id/bike_stopsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/nantunFragment"
+        android:name="com.example.project.nantunFragment"
+        android:label="nantunFragment" >
+        <action
+            android:id="@+id/action_nantunFragment_to_minimapFragment"
+            app:destination="@id/minimapFragment" />
+        <action
+            android:id="@+id/action_nantunFragment_to_bike_stopsFragment"
+            app:destination="@id/bike_stopsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/xitunFragment"
+        android:name="com.example.project.xitunFragment"
+        android:label="xitunFragment" >
+        <action
+            android:id="@+id/action_xitunFragment_to_minimapFragment"
+            app:destination="@id/minimapFragment" />
+        <action
+            android:id="@+id/action_xitunFragment_to_bike_stopsFragment"
+            app:destination="@id/bike_stopsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/map_guideFragment"
+        android:name="com.example.project.map_guideFragment"
+        android:label="fragment_mapguide"
+        tools:layout="@layout/fragment_mapguide" />
+    <fragment
+        android:id="@+id/bike_stopsFragment"
+        android:name="com.example.project.bike_stopsFragment"
+        android:label="fragment_bikestops"
+        tools:layout="@layout/fragment_bikestops" />
+</navigation>
